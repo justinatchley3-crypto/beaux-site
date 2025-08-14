@@ -1,234 +1,217 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>BeauxOS – AI Operating System for Growth</title> <meta name="description" content="BeauxOS installs AI systems that capture, convert, and orchestrate your pipeline—future‑proofed, governed, and live in 48 hours." /> <meta property="og:title" content="BeauxOS – AI Operating System for Growth" /> <meta property="og:description" content="Install AI agents that rescue missed calls, capture leads, reactivate pipeline, and book meetings—then scale with governance, analytics, and SLAs." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https://beaucollective.com/" /> <link rel="icon" href="/favicon.ico" /> <link rel="preconnect" href="https://assets.calendly.com" crossorigin> <style> :root{ --bg:#0b0f14;--card:#121820;--muted:#98a2b3;--text:#e6edf3;--brand:#6ee7b7;--accent:#60a5fa;--violet:#7c3aed; --border:#1f2937;--ring:0 0 0 2px rgba(96,165,250,.35) } *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif;line-height:1.6} a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline} .wrap{max-width:1120px;margin:0 auto;padding:24px} .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0} .brand{display:flex;align-items:center;gap:10px} .logo{font-weight:800;letter-spacing:.3px} .badge{display:inline-block;font-size:12px;color:#0a0d12;background:var(--brand);padding:6px 10px;border-radius:999px;font-weight:800} .topnav a{margin-left:14px;color:var(--muted);font-weight:600} .topnav a:hover{color:#fff;text-decoration:none}
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>BeauxOS — AI Systems for Compounding Growth</title> <meta name="description" content="We install AI systems that capture, convert, and orchestrate your pipeline. Faster response, more bookings, governed at scale." /> <meta property="og:title" content="BeauxOS — AI Systems for Compounding Growth" /> <meta property="og:description" content="Capture, convert, orchestrate. Missed‑call rescue, lead capture, reactivation, and bookings—then governance, dashboards, and SLAs." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https://beaucollective.com/" /> <meta property="og:image" content="/og-image.jpg" /> <link rel="icon" href="/favicon.ico" /> <link rel="preconnect" href="https://assets.calendly.com" crossorigin> <style> :root{ --bg:#0a0b0f; --panel:#0f1116; --ink:#e8eaee; --muted:#a7b0be; --line:#1a1f29; --brand:#c9f31d; --acc:#8aa4ff; --ok:#2bd4bd; } *{box-sizing:border-box} html,body{margin:0;padding:0;background:linear-gradient(180deg,#090a0e 0%,#0b0d12 100%);color:var(--ink); font-family:ui-sans-serif,Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif; line-height:1.55;-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale} a{color:#cfd8ff;text-decoration:none} a:hover{text-decoration:underline} .wrap{max-width:1120px;margin:0 auto;padding:28px} .nav{display:flex;align-items:center;justify-content:space-between;padding:8px 0} .brand{display:flex;align-items:center;gap:12px} .mark{width:26px;height:26px;border-radius:8px;background: radial-gradient(80% 80% at 20% 20%,#e5ff7a,transparent 60%), linear-gradient(135deg,#c9f31d 0%,#8af5c6 100%); box-shadow:0 10px 30px rgba(201,243,29,.2)} .logo{font-weight:800;letter-spacing:.2px} .navlinks a{margin-left:18px;color:var(--muted);font-weight:600} .navlinks a:hover{color:#fff;text-decoration:none} .chip{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid #232836;color:#b9c1d3;font-size:12px}
 text
-.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;padding:34px 0}
-.hero h1{margin:0 0 12px;font-size:42px;line-height:1.12}
-.hero p{color:var(--muted);font-size:18px;margin:10px 0 22px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:end;padding:38px 0 26px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#c9f31d;font-weight:800}
+h1{font-size:44px;line-height:1.08;margin:10px 0 12px;letter-spacing:-.01em}
+.sub{color:#c3cad6;font-size:18px;margin:0 0 18px;max-width:48ch}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--border);background:#111827;color:#e5e7eb;padding:12px 16px;border-radius:10px;font-weight:700;cursor:pointer;transition:all .18s ease}
-.btn:hover{transform:translateY(-1px);box-shadow:var(--ring)}
-.btn.primary{background:linear-gradient(135deg,var(--accent),#4f46e5);border-color:transparent}
-.btn.alt{background:linear-gradient(135deg,var(--brand),#22c55e);border-color:transparent;color:#0a0d12}
+.btn{display:inline-flex;align-items:center;gap:10px;border:1px solid #242a36;background:#10131a;color:#eef1f6;
+  padding:12px 16px;border-radius:12px;font-weight:700;cursor:pointer;transition:all .18s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:0 0 0 2px rgba(138,164,255,.25)}
+.btn.primary{background:linear-gradient(135deg,#8aa4ff,#4c6fff);border-color:transparent}
+.btn.ghost{background:transparent;border-color:#232936;color:#d5dbe8}
+.glass{background:rgba(16,19,26,.7);backdrop-filter:blur(12px);border:1px solid #1e2430;border-radius:16px}
 
-.section{padding:28px 0}
+.split{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.tile{padding:16px;border:1px solid #1b212d;border-radius:14px;background:linear-gradient(180deg,#0f1218 0%,#0d1015 100%)}
+.tile h3{margin:0 0 6px;font-size:17px}
 .muted{color:var(--muted)}
-.h2{font-size:26px;margin:0 0 10px}
-.kicker{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);font-weight:800;margin-bottom:6px}
 
-.grid{display:grid;gap:18px}
-.cards3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.cards2{grid-template-columns:repeat(2,minmax(0,1fr))}
-.cards4{grid-template-columns:repeat(4,minmax(0,1fr))}
-.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px}
-.card h3{margin:0 0 6px;font-size:18px}
-.em{color:#d1d5db}
-
-.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
-.kpi{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;text-align:center}
+.section{padding:26px 0}
+.section h2{font-size:26px;margin:0 0 10px}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.kpi{padding:16px;border:1px solid #1b212d;border-radius:14px;background:linear-gradient(180deg,#0f1218 0%,#0d1015 100%);text-align:center}
 .kpi strong{display:block;font-size:26px}
 
-.process .step .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:999px;background:var(--accent);color:#0a0d12;font-weight:800;margin-bottom:10px}
-.process .step strong{display:block;margin-bottom:4px}
+.phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.phase{padding:16px} .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:999px;
+  background:#8aa4ff;color:#0b0d12;font-weight:900;margin-bottom:8px}
+.phase h4{margin:0 0 6px}
 
-.plan{border:1px solid var(--border);background:var(--card);border-radius:14px;padding:18px}
-.plan h4{margin:0 0 6px}
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.plan{padding:18px;border:1px solid #1b212d;border-radius:16px;background:
+  radial-gradient(120% 120% at 0% 0%,rgba(201,243,29,.06),transparent 60%),
+  linear-gradient(180deg,#0f1218 0%,#0d1015 100%)}
+.plan h4{margin:0 0 8px}
 .plan ul{margin:8px 0 0 18px}
-.label{display:inline-block;font-size:11px;background:#0f172a;border:1px solid var(--border);color:#cbd5e1;padding:4px 8px;border-radius:999px;margin-left:8px}
+.label{display:inline-block;font-size:11px;padding:4px 8px;border-radius:999px;background:#10131a;border:1px solid #232a37;color:#cbd4e6;margin-left:8px}
 
-.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-.pill{font-size:12px;border:1px solid var(--border);border-radius:999px;padding:6px 10px;background:#0f172a;color:#cbd5e1}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.pill{font-size:12px;border:1px solid #232a37;border-radius:999px;padding:6px 10px;background:#0f131b;color:#cbd4e6}
 
-.faq details{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
-.faq summary{cursor:pointer;font-weight:700}
+.proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.quote{padding:18px;border:1px solid #1b212d;border-radius:16px;background:linear-gradient(180deg,#0f1218 0%,#0d1015 100%)}
+.quote .who{color:#cbd4e6;font-weight:700;margin-top:8px}
 
-.book{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
-.frame{background:var(--card);border:1px dashed #334155;border-radius:14px;padding:8px}
-footer{margin-top:36px;padding:18px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--border);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.book{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.frame{border:1px dashed #2a3140;border-radius:16px;padding:8px;background:linear-gradient(180deg,#0f1218 0%,#0d1015 100%)}
+
+footer{margin-top:34px;padding:18px 0;color:#9eacc1;font-size:13px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 @media (max-width:1040px){
   .hero{grid-template-columns:1fr}
-  .cards3,.kpis,.cards2,.cards4,.book{grid-template-columns:1fr}
+  .split,.kpis,.phases,.plans,.book,.proof{grid-template-columns:1fr}
 }
-</style> </head> <body> <div class="wrap"> <nav class="nav"> <div class="brand"> <div class="logo">BeauxOS</div> <span class="badge">Build v1 - Published</span> </div> <div class="topnav"> <a href="#phases">Roadmap</a> <a href="#engagements">Engagements</a> <a href="#integrations">Integrations</a> <a href="#book">Book</a> </div> </nav>
+</style> </head> <body> <div class="wrap"> <nav class="nav"> <div class="brand"> <div class="mark"></div> <div class="logo">BeauxOS</div> </div> <div class="navlinks"> <a href="#roadmap">Roadmap</a> <a href="#engagements">Engagements</a> <a href="#integrations">Stack</a> <a href="#book">Book</a> </div> </nav>
 text
 <header class="hero">
   <div>
-    <div class="kicker">AI operating system for growth</div>
-    <h1>We install AI systems that capture, convert, and orchestrate your pipeline—live in 48 hours</h1>
-    <p class="muted">Rescue missed calls, capture and qualify leads, reactivate dormant pipeline, book meetings, and enforce SLAs—then scale with governance, analytics, and multi‑location rollouts.</p>
+    <div class="eyebrow">AI systems, installed</div>
+    <h1>Capture. Convert. Orchestrate.</h1>
+    <p class="sub">We install AI systems that rescue missed calls, capture and qualify leads, reactivate pipeline, and book meetings—then add governance, dashboards, and SLAs.</p>
     <div class="cta">
-      <a class="btn primary" href="#book">Book 20‑min Future‑Proofing Audit</a>
-      <a class="btn" href="#engagements">See Engagements</a>
+      <a class="btn primary" href="#book">Book 20‑min Audit</a>
+      <a class="btn ghost" href="#engagements">See Engagements</a>
+      <span class="chip">Live in 48 hours</span>
     </div>
   </div>
-  <div class="card">
-    <h3>Quick wins we deliver</h3>
-    <ul class="muted" style="margin:8px 0 0 18px">
-      <li>Missed‑call SMS rescue within seconds</li>
-      <li>Web capture & qualification across forms/chat</li>
-      <li>Automated reactivation of cold/lost leads</li>
-      <li>Calendar booking with routing rules</li>
-    </ul>
+  <div class="glass" style="padding:18px">
+    <div class="split">
+      <div class="tile">
+        <h3>Missed‑Call Rescue</h3>
+        <p class="muted">Instant SMS callback. Hold attention. Book the slot.</p>
+      </div>
+      <div class="tile">
+        <h3>Capture & Qualify</h3>
+        <p class="muted">Forms and chat that convert. Clear next steps.</p>
+      </div>
+      <div class="tile">
+        <h3>Reactivation</h3>
+        <p class="muted">Warm dormant leads with compliant outreach.</p>
+      </div>
+    </div>
   </div>
 </header>
 
 <section class="section">
-  <div class="grid kpis">
-    <div class="kpi"><strong>5–10× ROI</strong><span class="muted">typical in first 60–90 days</span></div>
-    <div class="kpi"><strong>24/7</strong><span class="muted">coverage for inbound & follow‑up</span></div>
-    <div class="kpi"><strong>48 hrs</strong><span class="muted">to go live on core agents</span></div>
+  <div class="kpis">
+    <div class="kpi"><strong>−60–80%</strong><span class="muted">time‑to‑first‑response</span></div>
+    <div class="kpi"><strong>+25–50%</strong><span class="muted">lead‑to‑appointment</span></div>
+    <div class="kpi"><strong>10–20%</strong><span class="muted">reactivation rate</span></div>
   </div>
 </section>
 
-<section id="phases" class="section">
-  <div class="kicker">Phased roadmap</div>
-  <h2 class="h2">BeauxOS implementation (0–5)</h2>
-  <div class="grid cards2 process">
-    <div class="card step">
+<section id="roadmap" class="section">
+  <h2>Roadmap</h2>
+  <div class="phases">
+    <div class="phase">
       <div class="num">0</div>
-      <strong>Discovery & Audit (1–2 wks)</strong>
-      <p class="muted">Map inbound channels, baselines (speed‑to‑lead, bookings), and quick wins. Deliver system map + 90‑day plan.</p>
+      <h4>Discovery & Baseline</h4>
+      <p class="muted">System map, speed‑to‑lead, booking baseline, 90‑day plan.</p>
     </div>
-    <div class="card step">
+    <div class="phase">
       <div class="num">1</div>
-      <strong>Capture & Rescue (deploy in 48 hrs)</strong>
-      <p class="muted">Missed‑call SMS rescue, site capture agents, FAQ deflection, calendar booking with routing.</p>
+      <h4>Capture & Rescue</h4>
+      <p class="muted">Missed‑call SMS, site capture, routed bookings.</p>
     </div>
-    <div class="card step">
+    <div class="phase">
       <div class="num">2</div>
-      <strong>Nurture & Reactivation (2–4 wks)</strong>
-      <p class="muted">Sequenced SMS/email follow‑ups until booked, compliant opt‑outs, offer testing, send‑time optimization.</p>
+      <h4>Nurture & Reactivate</h4>
+      <p class="muted">Sequenced SMS/email until booked or disqualified.</p>
     </div>
-    <div class="card step">
+    <div class="phase">
       <div class="num">3</div>
-      <strong>Pipeline Orchestration (3–6 wks)</strong>
-      <p class="muted">CRM sync, lifecycle automation, SLA alerts, agent routing by territory/service/team availability.</p>
+      <h4>Orchestrate</h4>
+      <p class="muted">CRM lifecycle, SLA alerts, team routing, attribution.</p>
     </div>
-    <div class="card step">
+    <div class="phase">
       <div class="num">4</div>
-      <strong>Agent Specialization (ongoing)</strong>
-      <p class="muted">Role‑specific agents (Concierge, Qualification, Post‑Demo, Win‑Back) and knowledge governance.</p>
+      <h4>Specialize</h4>
+      <p class="muted">Concierge, Qualification, Post‑Demo, Win‑Back agents.</p>
     </div>
-    <div class="card step">
+    <div class="phase">
       <div class="num">5</div>
-      <strong>Analytics & Scale (ongoing)</strong>
-      <p class="muted">Executive dashboards, consent/audit logging, multi‑location rollouts, experimentation framework.</p>
+      <h4>Govern & Scale</h4>
+      <p class="muted">Consent, audit logs, dashboards, multi‑location rollout.</p>
     </div>
   </div>
 </section>
 
 <section id="engagements" class="section">
-  <div class="kicker">Engagements</div>
-  <h2 class="h2">Outcomes‑based retainers</h2>
-  <div class="grid cards3">
+  <h2>Engagements</h2>
+  <div class="plans">
     <div class="plan">
-      <h4>Starter <span class="label">Phases 0–1</span></h4>
+      <h4>Starter <span class="label">0–1</span></h4>
       <ul class="muted">
-        <li>Discovery & baselines, capture + rescue live</li>
-        <li>Booking automation, daily KPI snapshot</li>
-        <li>Light nurture sequences</li>
+        <li>Discovery baselines</li>
+        <li>Capture & rescue live</li>
+        <li>Booking automation</li>
       </ul>
     </div>
     <div class="plan">
-      <h4>Pro <span class="label">Phases 0–3</span></h4>
+      <h4>Pro <span class="label">0–3</span></h4>
       <ul class="muted">
-        <li>Full capture, nurture, reactivation programs</li>
-        <li>CRM lifecycle automation + SLA dashboards</li>
-        <li>Routing by team/territory/service</li>
+        <li>Full capture + nurture + reactivation</li>
+        <li>CRM lifecycle + SLA dashboards</li>
+        <li>Routing by team/service/territory</li>
       </ul>
     </div>
     <div class="plan">
-      <h4>Enterprise <span class="label">Phases 0–5</span></h4>
+      <h4>Enterprise <span class="label">0–5</span></h4>
       <ul class="muted">
-        <li>Specialized agents -  Multi‑location rollout</li>
-        <li>Governance, consent, audit logging</li>
-        <li>Executive dashboards -  Experimentation</li>
+        <li>Agent specialization -  Governance</li>
+        <li>Dashboards -  Attribution</li>
+        <li>Multi‑location rollout</li>
       </ul>
     </div>
   </div>
-  <p class="muted" style="margin-top:10px">Pricing and SLAs tailored after the audit. We scope by outcomes and systems complexity.</p>
-</section>
-
-<section class="section">
-  <div class="kicker">What we implement</div>
-  <h2 class="h2">Agents, channels, orchestration</h2>
-  <div class="grid cards3">
-    <div class="card">
-      <h3>Agents</h3>
-      <p class="muted">Missed‑Call Rescue, Web Capture, Qualification, Post‑Demo Follow‑up, Win‑Back/Reactivate.</p>
-    </div>
-    <div class="card">
-      <h3>Channels</h3>
-      <p class="muted">SMS and email orchestration; voice drops optional where compliant. Human handoff when needed.</p>
-    </div>
-    <div class="card">
-      <h3>Orchestration</h3>
-      <p class="muted">Lifecycle automation, SLA alerts, routing by territory/service/team, attribution basics.</p>
-    </div>
-  </div>
+  <p class="muted" style="margin-top:8px">Outcomes, integrations, and SLAs are tailored after the audit.</p>
 </section>
 
 <section id="integrations" class="section">
-  <div class="kicker">Integrations & compliance</div>
-  <h2 class="h2">We plug into your stack</h2>
-  <div class="card">
+  <h2>Stack & Compliance</h2>
+  <div class="glass" style="padding:16px">
     <div class="stack">
-      <span class="pill">HubSpot</span>
-      <span class="pill">Salesforce (light)</span>
-      <span class="pill">GoHighLevel</span>
-      <span class="pill">Pipedrive</span>
-      <span class="pill">Twilio</span>
-      <span class="pill">RingCentral</span>
-      <span class="pill">Aircall</span>
-      <span class="pill">Calendly</span>
-      <span class="pill">Cal.com</span>
+      <span class="pill">HubSpot</span><span class="pill">Salesforce (light)</span><span class="pill">GoHighLevel</span>
+      <span class="pill">Pipedrive</span><span class="pill">Twilio</span><span class="pill">RingCentral</span>
+      <span class="pill">Aircall</span><span class="pill">Calendly</span><span class="pill">Cal.com</span>
     </div>
-    <p class="muted" style="margin-top:8px">Compliance: consent tracking, TCPA‑friendly outreach, quiet hours, opt‑out handling, audit logs.</p>
+    <p class="muted" style="margin-top:8px">Compliance: consent tracking, opt‑out handling, quiet hours, audit logs.</p>
   </div>
 </section>
 
 <section class="section">
-  <div class="kicker">Proof</div>
-  <h2 class="h2">Results we target</h2>
-  <div class="grid kpis">
-    <div class="kpi"><strong>+25–50%</strong><span class="muted">lift in lead‑to‑appointment</span></div>
-    <div class="kpi"><strong>−50–70%</strong><span class="muted">time‑to‑first‑response</span></div>
-    <div class="kpi"><strong>10–20%</strong><span class="muted">reactivation of dormant leads</span></div>
-  </div>
-  <p class="muted" style="margin-top:8px">Your mileage varies by channel quality and volume. We baseline first, then commit to targets.</p>
-</section>
-
-<section class="section">
-  <div class="card">
-    <h3>Guarantee</h3>
-    <p class="muted">If we don’t improve speed‑to‑lead and show booked meetings in 30 days, you don’t pay.</p>
+  <h2>Proof</h2>
+  <div class="proof">
+    <div class="quote">
+      <div class="muted">“Speed‑to‑lead collapsed and calendars filled. Zero lift on our end.”</div>
+      <div class="who">Head of Sales, Services</div>
+    </div>
+    <div class="quote">
+      <div class="muted">“Dormant pipeline warmed back up—bookings we’d written off.”</div>
+      <div class="who">COO, Multi‑location</div>
+    </div>
+    <div class="quote">
+      <div class="muted">“Clear orchestration. Agents handle the busywork; team handles the moments.”</div>
+      <div class="who">VP Growth, B2B</div>
+    </div>
   </div>
 </section>
 
 <section id="book" class="section">
-  <div class="kicker">Get started</div>
-  <h2 class="h2">Book your 20‑minute Future‑Proofing Audit</h2>
-  <p class="muted" style="margin:0 0 12px">We’ll identify leakage, prioritize agents, and outline your ROI roadmap.</p>
+  <h2>Book your 20‑minute Future‑Proofing Audit</h2>
+  <p class="muted" style="margin:0 0 10px">We’ll map leakage, prioritize agents, and outline your ROI path.</p>
   <div class="book">
     <div class="frame">
       <div class="calendly-inline-widget"
            data-url="https://calendly.com/justinatchley3/future-proofing-audit-20-minutes"
            style="min-width:320px;height:700px"></div>
     </div>
-    <div class="card">
-      <h3>What we’ll cover</h3>
+    <div class="glass" style="padding:18px">
+      <div class="muted">What we’ll cover</div>
       <ul class="muted" style="margin:8px 0 0 18px">
         <li>Missed‑lead and missed‑call gaps</li>
-        <li>Prioritized agent playbook</li>
-        <li>Expected ROI and timeline</li>
-        <li>Next steps to go live in 48 hours</li>
+        <li>Agent playbook and routing</li>
+        <li>Targets and timeline</li>
+        <li>Live in 48 hours</li>
       </ul>
-      <div style="margin-top:16px" class="muted">Prefer email? hello@beaucollective.com</div>
+      <div style="margin-top:14px" class="muted">Prefer email? hello@beaucollective.com</div>
     </div>
   </div>
 </section>
 
 <footer>
   <div>© 2025 BeauxOS. All rights reserved.</div>
-  <div class="muted">Privacy -  Build v1 -  BeauxOS</div>
+  <div><a href="/privacy.html" class="muted">Privacy</a> -  Build v2</div>
 </footer>
 </div> <script src="https://assets.calendly.com/assets/external/widget.js" async></script> </body> </html>
