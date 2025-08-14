@@ -1,80 +1,223 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Beaux – Future‑Proofing Growth with AI Agents</title> <meta name="description" content="Beaux deploys AI agents that rescue missed calls, capture and reactivate leads, and book qualified meetings—live in 48 hours." /> <link rel="preconnect" href="https://assets.calendly.com" crossorigin> <style> :root{ --bg:#0b0f14;--card:#121820;--muted:#98a2b3;--text:#e6edf3;--brand:#6ee7b7;--accent:#60a5fa;--danger:#f87171; --ring: 0 0 0 2px rgba(96,165,250,.35) } *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif;line-height:1.6} a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline} .wrap{max-width:1100px;margin:0 auto;padding:24px} .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0} .logo{font-weight:700;letter-spacing:.4px} .badge{display:inline-block;font-size:12px;color:#0a0d12;background:var(--brand);padding:6px 10px;border-radius:999px;font-weight:700;vertical-align:middle} .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:32px 0} .hero h1{margin:0 0 10px;font-size:40px;line-height:1.15} .hero p{color:var(--muted);font-size:18px;margin:10px 0 22px} .cta{display:flex;gap:12px;flex-wrap:wrap} .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid #1f2937;background:#111827;color:#e5e7eb;padding:12px 16px;border-radius:10px;font-weight:600;cursor:pointer;transition:all .18s ease} .btn:hover{transform:translateY(-1px);box-shadow:var(--ring)} .btn.primary{background:linear-gradient(135deg,var(--accent),#4f46e5);border-color:transparent} .grid{display:grid;gap:18px} .cards{grid-template-columns:repeat(3,minmax(0,1fr))} .card{background:var(--card);border:1px solid #1f2937;border-radius:14px;padding:18px;min-height:160px} .card h3{margin:0 0 6px;font-size:18px} .muted{color:var(--muted)} .section{padding:26px 0} .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px} .kpi{background:var(--card);border:1px solid #1f2937;border-radius:14px;padding:18px;text-align:center} .kpi strong{display:block;font-size:26px} .process{grid-template-columns:repeat(4,minmax(0,1fr))} .step{position:relative} .step .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:999px;background:var(--accent);color:#0a0d12;font-weight:800;margin-bottom:10px} .faq{grid-template-columns:1fr 1fr} details{background:var(--card);border:1px solid #1f2937;border-radius:12px;padding:14px} summary{cursor:pointer;font-weight:600} .book{display:grid;grid-template-columns:1fr 1fr;gap:22px} .frame{background:var(--card);border:1px dashed #334155;border-radius:14px;padding:8px} footer{margin-top:36px;padding:18px 0;color:var(--muted);font-size:13px;border-top:1px solid #1f2937} @media (max-width:960px){ .hero{grid-template-columns:1fr} .cards,.kpis,.process,.book,.faq{grid-template-columns:1fr} } </style> </head> <body> <div class="wrap"> <nav class="nav"> <div class="logo">Beaux</div> <div><span class="badge">Build v10 · Published</span></div> </nav>
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>BeauxOS – AI Operating System for Growth</title> <meta name="description" content="BeauxOS installs AI systems that capture, convert, and orchestrate your pipeline—future‑proofed, governed, and live in 48 hours." /> <meta property="og:title" content="BeauxOS – AI Operating System for Growth" /> <meta property="og:description" content="Install AI agents that rescue missed calls, capture leads, reactivate pipeline, and book meetings—then scale with governance, analytics, and SLAs." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https://beaucollective.com/" /> <link rel="icon" href="/favicon.ico" /> <link rel="preconnect" href="https://assets.calendly.com" crossorigin> <style> :root{ --bg:#0b0f14;--card:#121820;--muted:#98a2b3;--text:#e6edf3;--brand:#6ee7b7;--accent:#60a5fa;--violet:#7c3aed; --border:#1f2937;--ring:0 0 0 2px rgba(96,165,250,.35) } *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif;line-height:1.6} a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline} .wrap{max-width:1120px;margin:0 auto;padding:24px} .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0} .brand{display:flex;align-items:center;gap:10px} .logo{font-weight:800;letter-spacing:.3px} .badge{display:inline-block;font-size:12px;color:#0a0d12;background:var(--brand);padding:6px 10px;border-radius:999px;font-weight:800} .topnav a{margin-left:14px;color:var(--muted);font-weight:600} .topnav a:hover{color:#fff;text-decoration:none}
+text
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;padding:34px 0}
+.hero h1{margin:0 0 12px;font-size:42px;line-height:1.12}
+.hero p{color:var(--muted);font-size:18px;margin:10px 0 22px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--border);background:#111827;color:#e5e7eb;padding:12px 16px;border-radius:10px;font-weight:700;cursor:pointer;transition:all .18s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--ring)}
+.btn.primary{background:linear-gradient(135deg,var(--accent),#4f46e5);border-color:transparent}
+.btn.alt{background:linear-gradient(135deg,var(--brand),#22c55e);border-color:transparent;color:#0a0d12}
+
+.section{padding:28px 0}
+.muted{color:var(--muted)}
+.h2{font-size:26px;margin:0 0 10px}
+.kicker{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);font-weight:800;margin-bottom:6px}
+
+.grid{display:grid;gap:18px}
+.cards3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cards2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cards4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px}
+.card h3{margin:0 0 6px;font-size:18px}
+.em{color:#d1d5db}
+
+.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
+.kpi{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;text-align:center}
+.kpi strong{display:block;font-size:26px}
+
+.process .step .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:999px;background:var(--accent);color:#0a0d12;font-weight:800;margin-bottom:10px}
+.process .step strong{display:block;margin-bottom:4px}
+
+.plan{border:1px solid var(--border);background:var(--card);border-radius:14px;padding:18px}
+.plan h4{margin:0 0 6px}
+.plan ul{margin:8px 0 0 18px}
+.label{display:inline-block;font-size:11px;background:#0f172a;border:1px solid var(--border);color:#cbd5e1;padding:4px 8px;border-radius:999px;margin-left:8px}
+
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.pill{font-size:12px;border:1px solid var(--border);border-radius:999px;padding:6px 10px;background:#0f172a;color:#cbd5e1}
+
+.faq details{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
+.faq summary{cursor:pointer;font-weight:700}
+
+.book{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+.frame{background:var(--card);border:1px dashed #334155;border-radius:14px;padding:8px}
+footer{margin-top:36px;padding:18px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--border);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:1040px){
+  .hero{grid-template-columns:1fr}
+  .cards3,.kpis,.cards2,.cards4,.book{grid-template-columns:1fr}
+}
+</style> </head> <body> <div class="wrap"> <nav class="nav"> <div class="brand"> <div class="logo">BeauxOS</div> <span class="badge">Build v1 - Published</span> </div> <div class="topnav"> <a href="#phases">Roadmap</a> <a href="#engagements">Engagements</a> <a href="#integrations">Integrations</a> <a href="#book">Book</a> </div> </nav>
 text
 <header class="hero">
   <div>
-    <h1>AI agents that rescue missed calls, capture and reactivate leads, and book qualified meetings</h1>
-    <p>Stop losing pipeline to delays and dropped handoffs. Beaux deploys AI agents that engage prospects 24/7, follow up until they convert, and put qualified time on your calendar—live in 48 hours.</p>
+    <div class="kicker">AI operating system for growth</div>
+    <h1>We install AI systems that capture, convert, and orchestrate your pipeline—live in 48 hours</h1>
+    <p class="muted">Rescue missed calls, capture and qualify leads, reactivate dormant pipeline, book meetings, and enforce SLAs—then scale with governance, analytics, and multi‑location rollouts.</p>
     <div class="cta">
-      <a class="btn primary" href="#book">Book your 20‑min Future‑Proofing Audit</a>
-      <a class="btn" href="#how">How it works</a>
+      <a class="btn primary" href="#book">Book 20‑min Future‑Proofing Audit</a>
+      <a class="btn" href="#engagements">See Engagements</a>
     </div>
   </div>
   <div class="card">
-    <h3>What you get in 48 hours</h3>
+    <h3>Quick wins we deliver</h3>
     <ul class="muted" style="margin:8px 0 0 18px">
-      <li>Missed‑call rescue with instant SMS follow‑up</li>
-      <li>Lead capture + qualification across site/forms/chat</li>
+      <li>Missed‑call SMS rescue within seconds</li>
+      <li>Web capture & qualification across forms/chat</li>
       <li>Automated reactivation of cold/lost leads</li>
-      <li>Meeting booking into your calendar</li>
+      <li>Calendar booking with routing rules</li>
     </ul>
   </div>
 </header>
 
 <section class="section">
-  <div class="grid cards">
+  <div class="grid kpis">
+    <div class="kpi"><strong>5–10× ROI</strong><span class="muted">typical in first 60–90 days</span></div>
+    <div class="kpi"><strong>24/7</strong><span class="muted">coverage for inbound & follow‑up</span></div>
+    <div class="kpi"><strong>48 hrs</strong><span class="muted">to go live on core agents</span></div>
+  </div>
+</section>
+
+<section id="phases" class="section">
+  <div class="kicker">Phased roadmap</div>
+  <h2 class="h2">BeauxOS implementation (0–5)</h2>
+  <div class="grid cards2 process">
+    <div class="card step">
+      <div class="num">0</div>
+      <strong>Discovery & Audit (1–2 wks)</strong>
+      <p class="muted">Map inbound channels, baselines (speed‑to‑lead, bookings), and quick wins. Deliver system map + 90‑day plan.</p>
+    </div>
+    <div class="card step">
+      <div class="num">1</div>
+      <strong>Capture & Rescue (deploy in 48 hrs)</strong>
+      <p class="muted">Missed‑call SMS rescue, site capture agents, FAQ deflection, calendar booking with routing.</p>
+    </div>
+    <div class="card step">
+      <div class="num">2</div>
+      <strong>Nurture & Reactivation (2–4 wks)</strong>
+      <p class="muted">Sequenced SMS/email follow‑ups until booked, compliant opt‑outs, offer testing, send‑time optimization.</p>
+    </div>
+    <div class="card step">
+      <div class="num">3</div>
+      <strong>Pipeline Orchestration (3–6 wks)</strong>
+      <p class="muted">CRM sync, lifecycle automation, SLA alerts, agent routing by territory/service/team availability.</p>
+    </div>
+    <div class="card step">
+      <div class="num">4</div>
+      <strong>Agent Specialization (ongoing)</strong>
+      <p class="muted">Role‑specific agents (Concierge, Qualification, Post‑Demo, Win‑Back) and knowledge governance.</p>
+    </div>
+    <div class="card step">
+      <div class="num">5</div>
+      <strong>Analytics & Scale (ongoing)</strong>
+      <p class="muted">Executive dashboards, consent/audit logging, multi‑location rollouts, experimentation framework.</p>
+    </div>
+  </div>
+</section>
+
+<section id="engagements" class="section">
+  <div class="kicker">Engagements</div>
+  <h2 class="h2">Outcomes‑based retainers</h2>
+  <div class="grid cards3">
+    <div class="plan">
+      <h4>Starter <span class="label">Phases 0–1</span></h4>
+      <ul class="muted">
+        <li>Discovery & baselines, capture + rescue live</li>
+        <li>Booking automation, daily KPI snapshot</li>
+        <li>Light nurture sequences</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h4>Pro <span class="label">Phases 0–3</span></h4>
+      <ul class="muted">
+        <li>Full capture, nurture, reactivation programs</li>
+        <li>CRM lifecycle automation + SLA dashboards</li>
+        <li>Routing by team/territory/service</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h4>Enterprise <span class="label">Phases 0–5</span></h4>
+      <ul class="muted">
+        <li>Specialized agents -  Multi‑location rollout</li>
+        <li>Governance, consent, audit logging</li>
+        <li>Executive dashboards -  Experimentation</li>
+      </ul>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:10px">Pricing and SLAs tailored after the audit. We scope by outcomes and systems complexity.</p>
+</section>
+
+<section class="section">
+  <div class="kicker">What we implement</div>
+  <h2 class="h2">Agents, channels, orchestration</h2>
+  <div class="grid cards3">
     <div class="card">
-      <h3>Missed‑Call Rescue</h3>
-      <p class="muted">Text back callers in seconds. Verify intent, answer FAQs, and secure a time slot—before competitors do.</p>
+      <h3>Agents</h3>
+      <p class="muted">Missed‑Call Rescue, Web Capture, Qualification, Post‑Demo Follow‑up, Win‑Back/Reactivate.</p>
     </div>
     <div class="card">
-      <h3>Lead Capture + Nurture</h3>
-      <p class="muted">Convert more web traffic with AI chat, form follow‑ups, and channel handoffs (email/SMS).</p>
+      <h3>Channels</h3>
+      <p class="muted">SMS and email orchestration; voice drops optional where compliant. Human handoff when needed.</p>
     </div>
     <div class="card">
-      <h3>Reactivation & Referrals</h3>
-      <p class="muted">Warm up dormant pipelines with compliant messaging that drives replies and bookings.</p>
+      <h3>Orchestration</h3>
+      <p class="muted">Lifecycle automation, SLA alerts, routing by territory/service/team, attribution basics.</p>
     </div>
+  </div>
+</section>
+
+<section id="integrations" class="section">
+  <div class="kicker">Integrations & compliance</div>
+  <h2 class="h2">We plug into your stack</h2>
+  <div class="card">
+    <div class="stack">
+      <span class="pill">HubSpot</span>
+      <span class="pill">Salesforce (light)</span>
+      <span class="pill">GoHighLevel</span>
+      <span class="pill">Pipedrive</span>
+      <span class="pill">Twilio</span>
+      <span class="pill">RingCentral</span>
+      <span class="pill">Aircall</span>
+      <span class="pill">Calendly</span>
+      <span class="pill">Cal.com</span>
+    </div>
+    <p class="muted" style="margin-top:8px">Compliance: consent tracking, TCPA‑friendly outreach, quiet hours, opt‑out handling, audit logs.</p>
   </div>
 </section>
 
 <section class="section">
+  <div class="kicker">Proof</div>
+  <h2 class="h2">Results we target</h2>
   <div class="grid kpis">
-    <div class="kpi"><strong>5–10× ROI</strong><span class="muted">seen in first 60 days</span></div>
-    <div class="kpi"><strong>24/7</strong><span class="muted">lead coverage</span></div>
-    <div class="kpi"><strong>48 hrs</strong><span class="muted">to go live</span></div>
+    <div class="kpi"><strong>+25–50%</strong><span class="muted">lift in lead‑to‑appointment</span></div>
+    <div class="kpi"><strong>−50–70%</strong><span class="muted">time‑to‑first‑response</span></div>
+    <div class="kpi"><strong>10–20%</strong><span class="muted">reactivation of dormant leads</span></div>
   </div>
-</section>
-
-<section id="how" class="section">
-  <h2 style="margin:0 0 10px">How it works</h2>
-  <div class="grid process">
-    <div class="card step"><div class="num">1</div><strong>Audit</strong><p class="muted">We audit inbound flows, handoffs, and missed‑lead gaps.</p></div>
-    <div class="card step"><div class="num">2</div><strong>Deploy</strong><p class="muted">Drop‑in AI agents for capture, follow‑up, and booking.</p></div>
-    <div class="card step"><div class="num">3</div><strong>Integrate</strong><p class="muted">Plug into your CRM, phone, and calendar stack.</p></div>
-    <div class="card step"><div class="num">4</div><strong>Optimize</strong><p class="muted">Tighten prompts, targeting, and SLAs for compounding gains.</p></div>
-  </div>
+  <p class="muted" style="margin-top:8px">Your mileage varies by channel quality and volume. We baseline first, then commit to targets.</p>
 </section>
 
 <section class="section">
   <div class="card">
     <h3>Guarantee</h3>
-    <p class="muted">If we don’t improve speed‑to‑lead and show booked meetings within 30 days, you don’t pay.</p>
+    <p class="muted">If we don’t improve speed‑to‑lead and show booked meetings in 30 days, you don’t pay.</p>
   </div>
 </section>
 
 <section id="book" class="section">
-  <h2 style="margin:0 0 10px">Book your 20‑minute Future‑Proofing Audit</h2>
-  <p class="muted" style="margin:0 0 12px">See exactly where pipeline is leaking and how AI agents plug it—custom to your flows.</p>
+  <div class="kicker">Get started</div>
+  <h2 class="h2">Book your 20‑minute Future‑Proofing Audit</h2>
+  <p class="muted" style="margin:0 0 12px">We’ll identify leakage, prioritize agents, and outline your ROI roadmap.</p>
   <div class="book">
     <div class="frame">
       <div class="calendly-inline-widget"
            data-url="https://calendly.com/justinatchley3/future-proofing-audit-20-minutes"
-           style="min-width:320px;height:680px"></div>
+           style="min-width:320px;height:700px"></div>
     </div>
     <div class="card">
       <h3>What we’ll cover</h3>
       <ul class="muted" style="margin:8px 0 0 18px">
-        <li>Missed‑call + missed‑lead gaps</li>
+        <li>Missed‑lead and missed‑call gaps</li>
         <li>Prioritized agent playbook</li>
         <li>Expected ROI and timeline</li>
         <li>Next steps to go live in 48 hours</li>
@@ -85,6 +228,7 @@ text
 </section>
 
 <footer>
-  <div>© 2025 Beaux. All rights reserved. -  Privacy -  Build v10</div>
+  <div>© 2025 BeauxOS. All rights reserved.</div>
+  <div class="muted">Privacy -  Build v1 -  BeauxOS</div>
 </footer>
-</div> <script src="https://assets.calendly.com/assets/external/widget.js" async></script> </body> </html> [END INDEX.HTML]
+</div> <script src="https://assets.calendly.com/assets/external/widget.js" async></script> </body> </html>
