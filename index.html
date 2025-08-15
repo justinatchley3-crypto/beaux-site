@@ -1,33 +1,101 @@
-<!doctype html> <html lang="en"> <head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" /> <title>BeauxOS — Never miss a call. Book more jobs.</title> <meta name="description" content="BeauxOS: AI that answers, schedules, follows up, and dispatches for trades and home services. Book more jobs with autonomous revenue ops." /> <meta name="theme-color" content="#0B0F14" /> <meta name="robots" content="index,follow" /> <!-- Open Graph / Twitter --> <meta property="og:title" content="BeauxOS — Never miss a call. Book more jobs." /> <meta property="og:description" content="AI that answers, schedules, follows up, and dispatches—so your team can focus on the work." /> <meta property="og:type" content="website" /> <meta property="og:image" content="/social.jpg" /> <meta name="twitter:card" content="summary_large_image" /> <!-- Fonts --> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"> <style> :root{ --bg:#0b0f14; --bg-elev:#111720; --card:#0f141b; --text:#eaf0f7; --muted:#a9b5c3; --primary:#5cc8ff; --primary-2:#2ba7ee; --accent:#9bffcf; --ok:#41d19e; --warn:#ffd166; --border:#1a2230; --shadow:0 10px 30px rgba(0,0,0,.35); --max:1120px; --radius:14px; --radius-sm:10px; } *{box-sizing:border-box} html,body{height:100%} body{ margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif; color:var(--text); background:radial-gradient(1200px 800px at 80% -10%, #0f1a27, #0b0f14 60%); line-height:1.5; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; } a{color:var(--text); text-decoration:none} .container{max-width:var(--max); margin:0 auto; padding:0 20px} .nav{ position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(12px); background:rgba(11,15,20,.55); border-bottom:1px solid var(--border); } .nav-inner{display:flex; align-items:center; justify-content:space-between; height:72px} .brand{display:flex; align-items:center; gap:12px} .logo{ width:36px; height:36px; border-radius:9px; background:linear-gradient(135deg,#2ba7ee, #5cc8ff); box-shadow:0 8px 18px rgba(92,200,255,.35); display:grid; place-items:center; color:#001521; font-weight:800 } .brand h1{font-size:18px; margin:0; letter-spacing:.2px} .nav a.btn{padding:10px 16px; border:1px solid var(--border); border-radius:10px; color:var(--text); transition:.2s} .nav a.btn:hover{background:#121923} .primary{background:linear-gradient(180deg, var(--primary), var(--primary-2)); color:#001018; border:none} .primary:hover{filter:brightness(1.05)} .hero{padding:72px 0 36px} .hero-grid{display:grid; grid-template-columns:1.4fr 1fr; gap:36px; align-items:center} .eyebrow{color:var(--accent); font-weight:700; letter-spacing:.4px; text-transform:uppercase; font-size:12px} h2.hero-title{font-size:48px; line-height:1.06; margin:10px 0 16px; letter-spacing:-.5px} .hero p{color:var(--muted); font-size:18px; margin:0 0 24px} .cta-row{display:flex; gap:12px; flex-wrap:wrap} .cta{padding:14px 18px; border-radius:12px; font-weight:700; display:inline-flex; gap:10px; align-items:center} .cta.secondary{background:#0f141b; border:1px solid var(--border); color:var(--text)} .card{ background:linear-gradient(180deg, #0e141d, #0b0f14); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow) } .kbd{padding:6px 10px; border-radius:8px; border:1px solid var(--border); background:#0e151e; color:var(--muted); font-size:12px} .badges{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px} .hero-visual{padding:18px} .visual{ aspect-ratio:16/10; width:100%; border-radius:16px; background: radial-gradient(600px 300px at 20% 10%, #122032 0, transparent 50%), radial-gradient(500px 260px at 120% -20%, rgba(92,200,255,.25), transparent 40%), #0b0f14; border:1px solid var(--border); position:relative; overflow:hidden } .glow{position:absolute; inset:auto; width:360px; height:360px; border-radius:50%; background:radial-gradient(closest-side, rgba(92,200,255,.35), rgba(0,0,0,0)); filter:blur(18px); left:-80px; top:-80px} .visual-content{position:absolute; inset:0; padding:18px; display:grid; grid-template-columns:1fr 1fr; gap:14px} .panel{background:#0f141b; border:1px solid var(--border); border-radius:12px; padding:14px} .panel h4{margin:0 0 6px; font-size:14px} .muted{color:var(--muted)} section{padding:64px 0} .section-title{font-size:28px; margin:0 0 22px} .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px} .grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:16px} .item{padding:18px} .item h3{margin:0 0 8px; font-size:18px} .price-card{padding:20px; display:flex; flex-direction:column; gap:14px} .price{font-size:26px; font-weight:800} .feature{display:flex; gap:10px; align-items:flex-start} .feature i{color:var(--ok); margin-top:3px} .faq dt{font-weight:700} .faq dd{margin:0 0 14px; color:var(--muted)} .strip{display:flex; gap:14px; flex-wrap:wrap; align-items:center} .strip .pill{border:1px solid var(--border); padding:8px 10px; border-radius:999px; color:var(--muted); font-size:13px} .footer{padding:36px 0; color:#9aa8b8; border-top:1px solid var(--border); background:#0a0e13} .footer a{color:#cfe7ff} .trust{display:flex; flex-wrap:wrap; gap:14px} .trust .cell{flex:1 1 260px; padding:16px} .note{font-size:12px; color:var(--muted)} .highlight{color:var(--accent); font-weight:700} .tag{display:inline-block; font-size:12px; padding:6px 8px; border:1px solid var(--border); border-radius:999px; color:var(--muted)} .tier-label{font-size:12px; letter-spacing:.4px; text-transform:uppercase; color:var(--muted)} .flagship{border:1px solid rgba(92,200,255,.6); background:linear-gradient(180deg,#0e1621,#0a0e13)} .sticky-cta{ position:fixed; right:20px; bottom:20px; display:flex; gap:10px; z-index:60; background:rgba(11,15,20,.5); border:1px solid var(--border); padding:10px 12px; border-radius:999px; backdrop-filter:blur(10px) } .sticky-cta a{padding:10px 14px; border-radius:999px} .hidden{display:none} /* Responsive */ @media (max-width: 980px){ .hero-grid{grid-template-columns:1fr} .grid-3{grid-template-columns:1fr} .grid-2{grid-template-columns:1fr} h2.hero-title{font-size:36px} } </style> </head> <body> <header class="nav"> <div class="container nav-inner"> <div class="brand"> <div class="logo" aria-label="BeauxOS logo">B</div> <h1>BeauxOS</h1> </div> <nav> <a href="#pricing" class="btn">Pricing</a> <a href="https://calendly.com/justinatchley3/future-proofing-audit-20-minutes" class="btn primary" target="_blank" rel="noopener">Book ROI Call</a> </nav> </div> </header> <main> <!-- Hero --> <section class="hero"> <div class="container hero-grid"> <div> <div class="eyebrow">AI Ops for Trades & Services</div> <h2 class="hero-title">Never miss a call again. <span class="highlight">Book more jobs</span> with BeauxOS.</h2> <p>AI that answers, schedules, follows up, and dispatches—so your team can focus on the work. Clear ROI in weeks, not months.</p> <div class="cta-row"> <a class="cta primary" href="https://calendly.com/justinatchley3/future-proofing-audit-20-minutes" target="_blank" rel="noopener">Book your 15‑minute ROI call →</a> <a class="cta secondary" href="#how">See how it works</a> </div> <div class="badges"> <span class="kbd">Data stays in your vault</span> <span class="kbd">Encryption at rest & in transit</span> <span class="kbd">Per‑tenant isolation</span> </div> </div> <div class="hero-visual"> <div class="visual card" role="img" aria-label="BeauxOS dashboard preview"> <div class="glow"></div> <div class="visual-content"> <div class="panel"> <h4>Today</h4> <div class="muted">Missed calls recovered</div> <h3 style="margin:6px 0 2px">18</h3> <div class="muted">Booked jobs</div> <h3 style="margin:6px 0 2px">12</h3> </div> <div class="panel"> <h4>This week</h4> <div class="muted">Added revenue</div> <h3 style="margin:6px 0 2px">$18,200</h3> <div class="muted">Avg. response time</div> <h3 style="margin:6px 0 2px">22s</h3> </div> <div class="panel"> <h4>Dispatch</h4> <div class="muted">Best slot</div> <h3 style="margin:6px 0 2px">2–4 PM · Tech Maria</h3> </div> <div class="panel"> <h4>Follow‑ups</h4> <div class="muted">Quotes awaiting reply</div> <h3 style="margin:6px 0 2px">7</h3> </div> </div> </div> </div> </div> </section>
+<!doctype html> <html lang="en"> <head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" /> <title>BeauxOS — Future‑proof your business. Book more appointments.</title> <meta name="description" content="BeauxOS: AI that answers calls, books appointments, follows up, and runs your back office—so you can focus on the work. Industry‑aware and built to future‑proof your business." /> <meta name="theme-color" content="#0B0F14" /> <meta name="robots" content="index,follow" /> <!-- Social --> <meta property="og:title" content="BeauxOS — Future‑proof your business. Book more appointments." /> <meta property="og:description" content="AI that answers, schedules, follows up, and optimizes your operations—today and for what’s next." /> <meta property="og:type" content="website" /> <meta property="og:image" content="/social.jpg" /> <meta name="twitter:card" content="summary_large_image" /> <!-- Fonts --> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"> <style> :root{ --bg:#0b0f14; --bg-elev:#111720; --card:#0f141b; --text:#eaf0f7; --muted:#a9b5c3; --primary:#5cc8ff; --primary-2:#2ba7ee; --accent:#9bffcf; --ok:#41d19e; --warn:#ffd166; --border:#1a2230; --shadow:0 10px 30px rgba(0,0,0,.35); --max:1120px; --radius:14px; } *{box-sizing:border-box} html,body{height:100%} body{ margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif; color:var(--text); background:radial-gradient(1200px 800px at 80% -10%, #0f1a27, #0b0f14 60%); line-height:1.5; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; } a{color:var(--text); text-decoration:none} .container{max-width:var(--max); margin:0 auto; padding:0 20px} .nav{ position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(12px); background:rgba(11,15,20,.55); border-bottom:1px solid var(--border); } .nav-inner{display:flex; align-items:center; justify-content:space-between; height:72px} .brand{display:flex; align-items:center; gap:12px} .logo{ width:36px; height:36px; border-radius:9px; background:linear-gradient(135deg,#2ba7ee, #5cc8ff); box-shadow:0 8px 18px rgba(92,200,255,.35); display:grid; place-items:center; color:#001521; font-weight:800 } .brand h1{font-size:18px; margin:0; letter-spacing:.2px} .nav a.btn{padding:10px 16px; border:1px solid var(--border); border-radius:10px; color:var(--text); transition:.2s} .nav a.btn:hover{background:#121923} .primary{background:linear-gradient(180deg, var(--primary), var(--primary-2)); color:#001018; border:none} .primary:hover{filter:brightness(1.05)} .hero{padding:72px 0 36px} .hero-grid{display:grid; grid-template-columns:1.4fr 1fr; gap:36px; align-items:center} .eyebrow{color:var(--accent); font-weight:700; letter-spacing:.4px; text-transform:uppercase; font-size:12px} h2.hero-title{font-size:44px; line-height:1.08; margin:10px 0 16px; letter-spacing:-.4px} .hero p{color:var(--muted); font-size:18px; margin:0 0 16px} .cta-row{display:flex; gap:12px; flex-wrap:wrap} .cta{padding:14px 18px; border-radius:12px; font-weight:700; display:inline-flex; gap:10px; align-items:center} .cta.secondary{background:#0f141b; border:1px solid var(--border); color:var(--text)} .card{ background:linear-gradient(180deg, #0e141d, #0b0f14); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow) } .kbd{padding:6px 10px; border-radius:8px; border:1px solid var(--border); background:#0e151e; color:var(--muted); font-size:12px} .badges{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px} .hero-visual{padding:18px} .visual{ aspect-ratio:16/10; width:100%; border-radius:16px; background: radial-gradient(600px 300px at 20% 10%, #122032 0, transparent 50%), radial-gradient(500px 260px at 120% -20%, rgba(92,200,255,.25), transparent 40%), #0b0f14; border:1px solid var(--border); position:relative; overflow:hidden } .glow{position:absolute; width:360px; height:360px; border-radius:50%; background:radial-gradient(closest-side, rgba(92,200,255,.35), rgba(0,0,0,0)); filter:blur(18px); left:-80px; top:-80px} .visual-content{position:absolute; inset:0; padding:18px; display:grid; grid-template-columns:1fr 1fr; gap:14px} .panel{background:#0f141b; border:1px solid var(--border); border-radius:12px; padding:14px} .panel h4{margin:0 0 6px; font-size:14px} .muted{color:var(--muted)} section{padding:64px 0} .section-title{font-size:28px; margin:0 0 22px} .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px} .grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:16px} .item{padding:18px} .item h3{margin:0 0 8px; font-size:18px} .price-card{padding:20px; display:flex; flex-direction:column; gap:14px} .price{font-size:26px; font-weight:800} .feature{display:flex; gap:10px; align-items:flex-start} .feature i{color:var(--ok); margin-top:3px} .faq dt{font-weight:700} .faq dd{margin:0 0 14px; color:var(--muted)} .strip{display:flex; gap:14px; flex-wrap:wrap; align-items:center} .strip .pill{border:1px solid var(--border); padding:8px 10px; border-radius:999px; color:var(--muted); font-size:13px} .footer{padding:36px 0; color:#9aa8b8; border-top:1px solid var(--border); background:#0a0e13} .footer a{color:#cfe7ff} .trust{display:flex; flex-wrap:wrap; gap:14px} .trust .cell{flex:1 1 260px; padding:16px} .note{font-size:12px; color:var(--muted)} .highlight{color:var(--accent); font-weight:700} .sticky-cta{ position:fixed; right:20px; bottom:20px; display:flex; gap:10px; z-index:60; background:rgba(11,15,20,.5); border:1px solid var(--border); padding:10px 12px; border-radius:999px; backdrop-filter:blur(10px) } .sticky-cta a{padding:10px 14px; border-radius:999px} /* Form */ form{display:grid; gap:10px} .field{display:grid; gap:6px} label{font-size:13px; color:#c8d6e5} input, select, textarea{ background:#0f141b; border:1px solid var(--border); color:var(--text); padding:12px 12px; border-radius:10px; font-size:14px; outline:none } input:focus, select:focus, textarea:focus{border-color:#2ba7ee; box-shadow:0 0 0 3px rgba(43,167,238,.25)} .two-col{display:grid; grid-template-columns:1fr 1fr; gap:10px} .success{display:none; padding:14px; border-radius:12px; background:#0f1f15; border:1px solid #164d2f; color:#abf0c9} .error{display:none; padding:14px; border-radius:12px; background:#221314; border:1px solid #5a2326; color:#f6b6bc} .small{font-size:12px; color:var(--muted)} /* Responsive */ @media (max-width: 980px){ .hero-grid{grid-template-columns:1fr} .grid-3{grid-template-columns:1fr} .grid-2{grid-template-columns:1fr} h2.hero-title{font-size:36px} .two-col{grid-template-columns:1fr} } </style> </head> <body> <header class="nav"> <div class="container nav-inner"> <div class="brand"> <div class="logo" aria-label="BeauxOS logo">B</div> <h1>BeauxOS</h1> </div> <nav> <a href="#pricing" class="btn">Pricing</a> <a href="https://calendly.com/justinatchley3/future-proofing-audit-20-minutes" class="btn primary" target="_blank" rel="noopener">Book ROI Call</a> </nav> </div> </header> <main> <!-- Hero with Industry Selector --> <section class="hero"> <div class="container hero-grid"> <div> <div class="eyebrow" id="eyebrow">AI Ops for Service Businesses</div> <h2 class="hero-title" id="heroTitle">Future‑proof your business. <span class="highlight">Book more appointments</span> with BeauxOS.</h2> <p id="heroSub">AI that answers calls, books appointments, follows up, and optimizes your operations—so you can focus on the work. Designed to run more of your back office over time.</p>
 text
+      <div class="two-col" style="margin:10px 0 10px">
+        <div class="field">
+          <label for="industry">Industry</label>
+          <select id="industry" aria-label="Select industry">
+            <option value="general" selected>General</option>
+            <option value="home">Home Services</option>
+            <option value="realestate">Real Estate</option>
+            <option value="beauty">Beauty & Wellness</option>
+            <option value="coaching">Coaching & Consulting</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="focus">Your focus</label>
+          <select id="focus" aria-label="Select focus">
+            <option value="bookings" selected>More bookings</option>
+            <option value="followups">Automated follow‑ups</option>
+            <option value="scheduling">Smarter scheduling</option>
+            <option value="analytics">Better analytics</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="cta primary" href="https://calendly.com/justinatchley3/future-proofing-audit-20-minutes" target="_blank" rel="noopener">Book your 15‑minute ROI call →</a>
+        <a class="cta secondary" href="#how">See how it works</a>
+      </div>
+      <div class="badges">
+        <span class="kbd">Works for solo, teams, and multi‑location</span>
+        <span class="kbd">Data stays in your vault</span>
+        <span class="kbd">Encryption at rest & in transit</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="visual card" role="img" aria-label="BeauxOS dashboard preview">
+        <div class="glow"></div>
+        <div class="visual-content">
+          <div class="panel">
+            <h4>Today</h4>
+            <div class="muted">Missed calls recovered</div>
+            <h3 style="margin:6px 0 2px">18</h3>
+            <div class="muted">Booked appointments</div>
+            <h3 style="margin:6px 0 2px">12</h3>
+          </div>
+          <div class="panel">
+            <h4>This week</h4>
+            <div class="muted">Added revenue</div>
+            <h3 style="margin:6px 0 2px">$18,200</h3>
+            <div class="muted">Avg. response time</div>
+            <h3 style="margin:6px 0 2px">22s</h3>
+          </div>
+          <div class="panel">
+            <h4>Scheduling</h4>
+            <div class="muted">Best slot</div>
+            <h3 style="margin:6px 0 2px">2–4 PM · Downtown</h3>
+          </div>
+          <div class="panel">
+            <h4>Follow‑ups</h4>
+            <div class="muted">Quotes awaiting reply</div>
+            <h3 style="margin:6px 0 2px">7</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- Outcomes -->
 <section id="outcomes">
   <div class="container">
     <h3 class="section-title">Outcomes you can count on</h3>
     <div class="grid-3">
       <div class="card item">
-        <h3>More booked jobs</h3>
-        <p class="muted">Turn every missed call into an SMS that books the job in minutes.</p>
+        <h3 id="o1t">More booked appointments</h3>
+        <p class="muted" id="o1d">Turn every missed call or message into a booked slot in minutes.</p>
       </div>
       <div class="card item">
-        <h3>Faster dispatch</h3>
-        <p class="muted">Geofenced suggestions put the right tech in the right window, every time.</p>
+        <h3 id="o2t">Smoother schedules</h3>
+        <p class="muted" id="o2d">Smart availability and location‑aware suggestions to place the right appointment at the right time.</p>
       </div>
       <div class="card item">
-        <h3>Automatic follow‑ups</h3>
-        <p class="muted">Quotes, warranties, and reminders closed out with your brand voice.</p>
+        <h3 id="o3t">Automatic follow‑ups</h3>
+        <p class="muted" id="o3d">Quotes, reminders, warranties, and check‑ins—sent in your brand voice.</p>
       </div>
       <div class="card item">
-        <h3>Crystal‑clear ROI</h3>
-        <p class="muted">Track leads → jobs → revenue. Weekly executive briefings included.</p>
+        <h3 id="o4t">Clear ROI</h3>
+        <p class="muted" id="o4d">Track leads → appointments → revenue. Weekly briefings with next‑best actions.</p>
       </div>
       <div class="card item">
-        <h3>Your data, private</h3>
-        <p class="muted">Per‑tenant isolation. Encryption at rest and in transit. Consent‑based recordings.</p>
+        <h3 id="o5t">Your data, private</h3>
+        <p class="muted" id="o5d">Per‑tenant isolation. Encryption at rest and in transit. Consent‑based recordings.</p>
       </div>
       <div class="card item">
-        <h3>Scales with you</h3>
-        <p class="muted">From one truck to multi‑location—without adding headcount.</p>
+        <h3 id="o6t">Built to future‑proof</h3>
+        <p class="muted" id="o6d">AI that learns your workflows today—and grows into a full back‑office operator over time.</p>
       </div>
     </div>
   </div>
@@ -40,19 +108,19 @@ text
     <div class="grid-2">
       <div class="card item">
         <h3>Connect</h3>
-        <p class="muted">Link your phone, calendar, and email. We plug into your CRM or provide one out-of-the-box.</p>
+        <p class="muted" id="h1">Link your phone, calendar, and email. We plug into your CRM—or provide one out of the box.</p>
       </div>
       <div class="card item">
         <h3>Answer & capture</h3>
-        <p class="muted">Beaux answers calls, transcribes, and texts back instantly to book jobs or answer FAQs.</p>
+        <p class="muted" id="h2">Beaux answers calls, transcribes, and texts back instantly to book or answer FAQs in your style.</p>
       </div>
       <div class="card item">
-        <h3>Schedule & dispatch</h3>
-        <p class="muted">Smart slotting with geofencing recommends the best tech and window. You approve or automate.</p>
+        <h3>Schedule & optimize</h3>
+        <p class="muted" id="h3">Smart slotting recommends the best times based on availability, location, and your rules. You approve or automate.</p>
       </div>
       <div class="card item">
         <h3>Follow‑up & grow</h3>
-        <p class="muted">Automated sequences for quotes, reviews, warranties, and memberships—measured to ROI.</p>
+        <p class="muted" id="h4">Automated sequences for quotes, reviews, reminders, and reactivation—measured to ROI.</p>
       </div>
     </div>
   </div>
@@ -69,7 +137,7 @@ text
         <div class="feature"><i>✓</i><span>AI missed‑call → SMS capture & booking</span></div>
         <div class="feature"><i>✓</i><span>Call transcription & summaries</span></div>
         <div class="feature"><i>✓</i><span>Review engine + basic email follow‑ups</span></div>
-        <div class="feature"><i>✓</i><span>ROI dashboard (leads, booked jobs, est. revenue)</span></div>
+        <div class="feature"><i>✓</i><span>ROI dashboard (leads, booked appointments, est. revenue)</span></div>
         <a class="cta primary" href="https://calendly.com/justinatchley3/future-proofing-audit-20-minutes" target="_blank" rel="noopener">Start with Starter →</a>
       </div>
       <div class="card price-card">
@@ -77,9 +145,9 @@ text
         <div class="price">$3,000–$5,000 / mo</div>
         <div class="feature"><i>✓</i><span>Everything in Starter</span></div>
         <div class="feature"><i>✓</i><span>AI scheduling + calendar orchestration</span></div>
-        <div class="feature"><i>✓</i><span>Geofenced dispatch suggestions</span></div>
+        <div class="feature"><i>✓</i><span>Location‑aware scheduling suggestions</span></div>
         <div class="feature"><i>✓</i><span>CRM integration & pipeline reporting</span></div>
-        <div class="feature"><i>✓</i><span>Quote follow‑ups, lapsed customer, warranty reminders</span></div>
+        <div class="feature"><i>✓</i><span>Quote follow‑ups, reactivation, warranty reminders</span></div>
         <div class="feature"><i>✓</i><span>Local SEO quick wins + GBP optimization</span></div>
         <a class="cta primary" href="https://calendly.com/justinatchley3/future-proofing-audit-20-minutes" target="_blank" rel="noopener">Scale with Growth →</a>
       </div>
@@ -91,9 +159,9 @@ text
         <div class="price">$7,500–$12,000 / mo</div>
         <div class="feature"><i>✓</i><span>Everything in Growth</span></div>
         <div class="feature"><i>✓</i><span>Multi‑channel AI agent (voice, SMS, email, web chat)</span></div>
-        <div class="feature"><i>✓</i><span>Inventory sync + reorder reminders</span></div>
+        <div class="feature"><i>✓</i><span>Inventory sync + reorder reminders (optional)</span></div>
         <div class="feature"><i>✓</i><span>Accounting (QuickBooks/Xero) for margin & cash analytics</span></div>
-        <div class="feature"><i>✓</i><span>Advanced analytics: profitability, technician efficiency, LTV</span></div>
+        <div class="feature"><i>✓</i><span>Advanced analytics: profitability, team efficiency, LTV</span></div>
         <div class="feature"><i>✓</i><span>Per‑tenant knowledge base + policy engine (HITL)</span></div>
         <a class="cta primary" href="https://calendly.com/justinatchley3/future-proofing-audit-20-minutes" target="_blank" rel="noopener">Upgrade to Elite →</a>
       </div>
@@ -102,14 +170,77 @@ text
         <div class="tier-label">Flagship</div>
         <div class="price">$15,000–$25,000 / mo</div>
         <div class="feature"><i>✓</i><span>Autonomous revenue ops: qualify → quote → follow‑up → book</span></div>
-        <div class="feature"><i>✓</i><span>Capacity & route intelligence with forecasts</span></div>
-        <div class="feature"><i>✓</i><span>Deep ERP/field service + accounting + inventory automations</span></div>
+        <div class="feature"><i>✓</i><span>Capacity, calendar, and territory intelligence with forecasts</span></div>
+        <div class="feature"><i>✓</i><span>Deep system integrations (CRM/ERP/booking), accounting, inventory automations</span></div>
         <div class="feature"><i>✓</i><span>Custom SOP agent + LoRA on your processes & brand tone</span></div>
         <div class="feature"><i>✓</i><span>Dedicated VPC option, SSO/SAML, audit logs, DPA</span></div>
         <div class="feature"><i>✓</i><span>Monthly executive reviews & scenario planning</span></div>
         <a class="cta primary" href="https://calendly.com/justinatchley3/future-proofing-audit-20-minutes" target="_blank" rel="noopener">Apply for Flagship →</a>
         <div class="note">Includes performance accelerator options tied to results.</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lead Form -->
+<section id="lead">
+  <div class="container">
+    <h3 class="section-title">Quick start — tell us your goals</h3>
+    <div class="card" style="padding:20px">
+      <div id="success" class="success">Thanks! Your details were received. Scroll to “Book now” to pick a time.</div>
+      <div id="error" class="error">Something went wrong. Please try again.</div>
+      <form id="leadForm" novalidate>
+        <div class="two-col">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required placeholder="Jane Doe" />
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" required placeholder="Acme Co." />
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@company.com" />
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" required placeholder="(555) 555-5555" />
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="field">
+            <label for="industry2">Industry</label>
+            <select id="industry2" name="industry">
+              <option value="general" selected>General</option>
+              <option value="home">Home Services</option>
+              <option value="realestate">Real Estate</option>
+              <option value="beauty">Beauty & Wellness</option>
+              <option value="coaching">Coaching & Consulting</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="volume">Monthly calls/appointments (approx.)</label>
+            <select id="volume" name="volume">
+              <option value="0-50">0–50</option>
+              <option value="51-200">51–200</option>
+              <option value="201-500">201–500</option>
+              <option value="500+">500+</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="goals">Your goals</label>
+          <textarea id="goals" name="goals" rows="3" placeholder="More bookings, better follow-ups, improve scheduling, etc."></textarea>
+        </div>
+        <div class="small">We’ll use this to tailor your demo. Your data remains private.</div>
+        <div class="cta-row" style="margin-top:6px">
+          <button class="cta primary" type="submit">Send and show booking →</button>
+          <a class="cta secondary" href="#book">Skip to booking</a>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -160,16 +291,16 @@ text
   <div class="container">
     <h3 class="section-title">Common questions</h3>
     <dl class="faq card" style="padding:20px">
+      <dt>Is this right for solo professionals?</dt>
+      <dd>Yes. Beaux answers and books for you 24/7, follows up on quotes, and keeps your calendar full—without extra staff.</dd>
       <dt>How fast can we go live?</dt>
       <dd>Most clients are live within 72 hours for phones/SMS and booking. Deeper integrations follow in week 2–4.</dd>
       <dt>What about my existing number and CRM?</dt>
       <dd>We forward or port your number and integrate your CRM. If you don’t have one, we provide a ready setup.</dd>
       <dt>Will AI send messages without my approval?</dt>
       <dd>You choose. Start with draft/approve and move to auto-send for specific intents with guardrails.</dd>
-      <dt>How do you prove ROI?</dt>
-      <dd>We track leads → booked jobs → revenue and send weekly executive briefings with concrete deltas.</dd>
-      <dt>Is my data used to train other clients’ models?</dt>
-      <dd>No. By default, your data stays in your tenant. Opt-in de‑identified aggregates are available if you want broader improvements.</dd>
+      <dt>Does BeauxOS learn my business over time?</dt>
+      <dd>Yes. With your consent, BeauxOS builds a secure knowledge base of your workflows and communications to improve accuracy and automation—future‑proofing your operations.</dd>
     </dl>
   </div>
 </section>
@@ -178,10 +309,10 @@ text
 <section id="cta">
   <div class="container card" style="padding:28px; display:flex; align-items:center; justify-content:space-between; gap:16px">
     <div>
-      <h3 style="margin:0 0 6px">Ready to book more jobs with BeauxOS?</h3>
-      <p class="muted" style="margin:0">Start with a 15‑minute ROI planning call. If we don’t add measurable revenue in 14 days, we’ll work free until we do.</p>
+      <h3 style="margin:0 0 6px" id="ctaTitle">Ready to future‑proof your business with BeauxOS?</h3>
+      <p class="muted" style="margin:0" id="ctaSub">Start with a 15‑minute ROI planning call. If we don’t add measurable revenue in 14 days, we’ll work free until we do.</p>
     </div>
     <a class="cta primary" href="https://calendly.com/justinatchley3/future-proofing-audit-20-minutes" target="_blank" rel="noopener">Book your call →</a>
   </div>
 </section>
-</main> <footer class="footer"> <div class="container" style="display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between; align-items:center"> <div style="display:flex; align-items:center; gap:10px"> <div class="logo">B</div> <div>BeauxOS © <span id="y"></span></div> </div> <div class="strip"> <a class="pill" href="mailto:hello@beaucollective.com">hello@beaucollective.com</a> <a class="pill" href="#">MSA</a> <a class="pill" href="#">DPA</a> <a class="pill" href="#trust">Privacy</a> </div> </div> </footer> <!-- Sticky CTA --> <div class="sticky-cta"> <a class="cta primary" href="https://calendly.com/justinatchley3/future-proofing-audit-20-minutes" target="_blank" rel="noopener">Book ROI Call</a> <a class="cta secondary" href="#pricing">View Pricing</a> </div> <!-- Calendly embed script --> <script src="https://assets.calendly.com/assets/external/widget.js" async></script> <script> // Year document.getElementById('y').textContent = new Date().getFullYear(); // Smooth scroll for internal links document.querySelectorAll('a[href^="#"]').forEach(a=>{ a.addEventListener('click', e=>{ const id = a.getAttribute('href'); if(id.length>1){ e.preventDefault(); document.querySelector(id)?.scrollIntoView({behavior:'smooth', block:'start'}); } }); }); // Basic analytics event stubs (extend later) function track(event, data){ console.log('[analytics]', event, data||{}); } document.querySelectorAll('a').forEach(el=>{ el.addEventListener('click', ()=> track('click', {href: el.getAttribute('href')})); }); </script> </body> </html>
+</main> <footer class="footer"> <div class="container" style="display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between; align-items:center"> <div style="display:flex; align-items:center; gap:10px"> <div class="logo">B</div> <div>BeauxOS © <span id="y"></span></div> </div> <div class="strip"> <a class="pill" href="mailto:hello@beaucollective.com">hello@beaucollective.com</a> <a class="pill" href="#">MSA</a> <a class="pill" href="#">DPA</a> <a class="pill" href="#trust">Privacy</a> </div> </div> </footer> <!-- Sticky CTA --> <div class="sticky-cta"> <a class="cta primary" href="https://calendly.com/justinatchley3/future-proofing-audit-20-minutes" target="_blank" rel="noopener">Book ROI Call</a> <a class="cta secondary" href="#pricing">View Pricing</a> </div> <!-- Calendly embed script --> <script src="https://assets.calendly.com/assets/external/widget.js" async></script> <script> // Year document.getElementById('y').textContent = new Date().getFullYear(); // Smooth scroll for internal links document.querySelectorAll('a[href^="#"]').forEach(a=>{ a.addEventListener('click', e=>{ const id = a.getAttribute('href'); if(id.length>1){ e.preventDefault(); document.querySelector(id)?.scrollIntoView({behavior:'smooth', block:'start'}); } }); }); // UTM capture const params = new URLSearchParams(location.search); const utm = { source: params.get('utm_source')||'', medium: params.get('utm_medium')||'', campaign: params.get('utm_campaign')||'', term: params.get('utm_term')||'', content: params.get('utm_content')||'', }; // Industry-specific copy dictionary const copy = { general: { eyebrow: 'AI Ops for Service Businesses', heroSub: 'AI that answers calls, books appointments, follows up, and optimizes your operations—so you can focus on the work. Designed to run more of your back office over time.', outcomes: [ ['More booked appointments','Turn every missed call or message into a booked slot in minutes.'], ['Smoother schedules','Smart availability and location‑aware suggestions to place the right appointment at the right time.'], ['Automatic follow‑ups','Quotes, reminders, warranties, and check‑ins—sent in your brand voice.'], ['Clear ROI','Track leads → appointments → revenue. Weekly briefings with next‑best actions.'], ['Your data, private','Per‑tenant isolation. Encryption at rest and in transit. Consent‑based recordings.'], ['Built to future‑proof','AI that learns your workflows today—and grows into a full back‑office operator over time.'] ], how: [ 'Link your phone, calendar, and email. We plug into your CRM—or provide one out of the box.', 'Beaux answers calls, transcribes, and texts back instantly to book or answer FAQs in your style.', 'Smart slotting recommends the best times based on availability, location, and your rules. You approve or automate.', 'Automated sequences for quotes, reviews, reminders, and reactivation—measured to ROI.' ], ctaTitle: 'Ready to future‑proof your business with BeauxOS?', ctaSub: 'Start with a 15‑minute ROI planning call. If we don’t add measurable revenue in 14 days, we’ll work free until we do.' }, home: { eyebrow: 'AI Ops for Home Services', heroSub: 'AI that captures every call, books jobs, follows up on quotes, and optimizes routes—so your crew stays productive.', outcomes: [ ['More booked jobs','Turn missed calls into booked jobs via SMS in minutes.'], ['Smarter routes','Location‑aware slotting to reduce windshield time.'], ['Automatic follow‑ups','Quotes, warranties, memberships—sent in your brand voice.'], ['Clear ROI','Leads → jobs → revenue, with weekly owner briefings.'], ['Your data, private','Per‑tenant isolation, encryption, consent‑based recordings.'], ['Built to future‑proof','From one truck to multi‑location—without more headcount.'] ], how: [ 'Connect phone, calendar, and CRM (or use our ready setup).', 'Beaux answers, transcribes, and texts back to book or answer FAQs.', 'Smart slotting recommends best tech/time by area and availability.', 'Automations for quotes, reviews, warranties, and reactivation.' ], ctaTitle: 'Ready to book more jobs with BeauxOS?', ctaSub: 'Go live in 72 hours with measurable impact, or we work free until we do.' }, realestate: { eyebrow: 'AI Ops for Real Estate', heroSub: 'AI that handles inquiries, books showings, follows up on leads, and keeps your pipeline moving—while learning your style.', outcomes: [ ['More booked showings','Every inquiry is answered and scheduled fast.'], ['Calendar that works for you','Smart slotting across your calendar and territories.'], ['Automatic follow‑ups','Nurture, reminders, post‑showing check‑ins in your voice.'], ['Clear ROI','Lead → showing → contract stages with weekly briefings.'], ['Your data, private','Per‑agent/team isolation and encryption by default.'], ['Built to future‑proof','From solo agent to team—without extra staff.'] ], how: [ 'Connect phone, calendar, and CRM (or use our lightweight CRM).', 'Beaux answers inquiries, qualifies, and books showings.', 'Smart slotting considers travel time and your rules.', 'Automations for nurture, reminders, and reactivation.' ], ctaTitle: 'Ready to book more showings with BeauxOS?', ctaSub: 'Launch a 14‑day pilot and measure the lift in booked showings.' }, beauty: { eyebrow: 'AI Ops for Beauty & Wellness', heroSub: 'AI that answers, books appointments, manages waitlists, and fills cancellations—while keeping your brand tone.', outcomes: [ ['More booked appointments','Capture every call or DM and fill your calendar.'], ['Fewer gaps','Smart suggestions to fill cancellations and slow hours.'], ['Automatic follow‑ups','Reminders, reviews, memberships in your style.'], ['Clear ROI','Leads → bookings → revenue, tracked weekly.'], ['Your data, private','Per‑business isolation and encryption by default.'], ['Built to future‑proof','From solo stylist to multi‑chair salon—without extra staff.'] ], how: [ 'Connect phone, calendar, and booking links.', 'Beaux answers and texts back to book or answer FAQs.', 'Smart slotting fills your best times and gaps.', 'Automations for reminders, reviews, and rebooking.' ], ctaTitle: 'Ready to fill your calendar with BeauxOS?', ctaSub: 'Fast setup and clear results in weeks, not months.' }, coaching: { eyebrow: 'AI Ops for Coaching & Consulting', heroSub: 'AI that qualifies leads, books sessions, follows up on invoices, and summarizes calls—so you can focus on clients.', outcomes: [ ['More qualified bookings','Lead capture and qualification on autopilot.'], ['Clean calendar','Smart slotting across timezones and programs.'], ['Automatic follow‑ups','Proposals, reminders, renewals in your tone.'], ['Clear ROI','Lead → session → revenue, with weekly briefings.'], ['Your data, private','Per‑client isolation and encryption.'], ['Built to future‑proof','From solo practice to firm—without extra ops hires.'] ], how: [ 'Connect phone, calendar, and email/CRM.', 'Beaux answers and books, and drafts replies in your voice.', 'Smart slotting respects program rules and buffers.', 'Automations for proposals, reminders, and renewals.' ], ctaTitle: 'Ready to grow your practice with BeauxOS?', ctaSub: 'Launch a 14‑day pilot and see the uplift in qualified sessions.' } }; function applyIndustry(ind){ const c = copy[ind] || copy.general; document.getElementById('eyebrow').textContent = c.eyebrow; document.getElementById('heroSub').textContent = c.heroSub; const outs = c.outcomes; [['o1t','o1d',0],['o2t','o2d',1],['o3t','o3d',2],['o4t','o4d',3],['o5t','o5d',4],['o6t','o6d',5]].forEach(([tId,dId,i])=>{ document.getElementById(tId).textContent = outs[i]; document.getElementById(dId).textContent = outs[i];[1] }); const how = c.how; ['h1','h2','h3','h4'].forEach((id, i)=> document.getElementById(id).textContent = how[i]); document.getElementById('ctaTitle').textContent = c.ctaTitle; document.getElementById('ctaSub').textContent = c.ctaSub; } const industrySel = document.getElementById('industry'); const focusSel = document.getElementById('focus'); industrySel.addEventListener('change', ()=> applyIndustry(industrySel.value)); focusSel.addEventListener('change', ()=>{ // Optional subtle tweak based on focus const f = focusSel.value; if(f==='bookings'){ document.getElementById('o1t').textContent = 'More booked appointments'; } if(f==='followups'){ document.getElementById('o3t').textContent = 'Automatic follow‑ups'; } if(f==='scheduling'){ document.getElementById('o2t').textContent = 'Smoother schedules'; } if(f==='analytics'){ document.getElementById('o4t').textContent = 'Clear ROI'; } }); // Initialize with any ?industry= param const qIndustry = params.get('industry'); if(qIndustry && copy[qIndustry]){ industrySel.value = qIndustry; } applyIndustry(industrySel.value); // Lead form handling const form = document.getElementById('leadForm'); const success = document.getElementById('success'); const errorBox = document.getElementById('error'); form?.addEventListener('submit', async (e)=>{ e.preventDefault(); errorBox.style.display = 'none'; success.style.display = 'none'; const payload = { timestamp: new Date().toISOString(), name: form.name.value.trim(), company: form.company.value.trim(), email: form.email.value.trim(), phone: form.phone.value.trim(), industry: form.industry.value, volume: form.volume.value, goals: form.goals.value.trim(), selectedIndustry: industrySel.value, utm }; // Basic validation if(!payload.name || !payload.company || !payload.email || !payload.phone){ errorBox.textContent = 'Please complete all required fields.'; errorBox.style.display='block'; return; } const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email); if(!emailOk){ errorBox.textContent = 'Please enter a valid email.'; errorBox.style.display='block'; return; } try{ console.log('[lead]', payload); // For debugging // To wire this up: replace the next block with a POST to your webhook/Make/Zapier/Airtable. // Example: // const r = await fetch('https://hooks.make.com/XXXXXXXX', { // method:'POST', headers:{'Content-Type':'application/json'}, // body: JSON.stringify(payload) // }); // if(!r.ok) throw new Error('Network response was not ok'); success.style.display = 'block'; form.reset(); // Scroll to booking setTimeout(()=> document.querySelector('#book')?.scrollIntoView({behavior:'smooth'}), 400); }catch(err){ console.error(err); errorBox.textContent = 'Could not submit. Please try again.'; errorBox.style.display='block'; } }); </script> </body> </html>
